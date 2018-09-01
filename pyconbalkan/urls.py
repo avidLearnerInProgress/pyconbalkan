@@ -6,7 +6,7 @@ from django.views.generic import TemplateView
 from pyconbalkan.cfp.views import cfp_detail, cfp_list, cfp_view
 from pyconbalkan.conference.api_urls import router as conference
 from pyconbalkan.core import routers, views
-from pyconbalkan.about.views import about_view
+from pyconbalkan.about.views import about_view, djangogirls_view
 from pyconbalkan.contact.views import contact_view
 from pyconbalkan.news.views import *
 from pyconbalkan.speaker.views import *
@@ -50,6 +50,7 @@ urlpatterns = [
     path('organizers/<slug:slug>/', organizer_view, name='organizer_detail'),
     path('volunteers/create/', volunteers_createview, name='volunteers_create'),
     path('about', about_view, name='about'),
+    path('djangogirls', djangogirls_view, name='djangogirls'),
     path('contact', contact_view, name='contact'),
     path('cfp', cfp_view, name='cfp'),
     path('cfps', cfp_list, name='cfp_list'),

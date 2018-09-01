@@ -24,3 +24,6 @@ def about_view(request):
     context.update(organizers_context)
 
     return render(request, 'about.html', context)
+
+def djangogirls_view(request):
+    return render(request, 'djangogirls.html', {})
